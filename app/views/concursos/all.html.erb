@@ -1,0 +1,36 @@
+<div class="index-page">
+<div class="wrapper">
+    <div class="header header-filter" style="background-image: url(&quot;assets/img/Bogota_bg.jpg&quot;);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="brand">
+                        <h1>Concursos</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main main-raised">
+        <div class="section section-basic">
+            <div class="container">
+                <div class="row">
+                    <% @concursos.each do |concurso| %>
+                        <div class="col-sm-4">
+                            <h3><%= concurso[:nombre] %></h3>
+                            <p>Abierto desde el <%= concurso[:fechaInicio] %> hasta <%= concurso[:fechaFin] %></p>
+                            <%= image_tag concurso[:imagen], :style => "max-width:300px; max-height:200px" %>
+                            <br>
+                            <%= link_to "<span class='btn btn-primary'>Ver</span>".html_safe, show_concursosP_path(:url => concurso[:url]) %>
+                            <%= link_to "<span class='btn btn-primary'>Participar</span>".html_safe, nuevo_video_path(:url => concurso[:url]) %>
+                            <br>
+                            <hr>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

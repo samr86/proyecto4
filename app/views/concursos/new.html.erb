@@ -1,0 +1,43 @@
+<div class="container" style="padding-top:100px;">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h2 class="text-center">Concurso nuevo</h2>
+
+        <%= form_with scope: :concurso, url: concursos_path, local: true do |form| %>
+            <div class="form-group">
+            <%= form.label :nombre %><br>
+            <%= form.text_field :nombre, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <%= form.label :imagen %><br>
+                <%= form.file_field :imagen %>
+            </div>
+
+            <div class="form-group">
+                <%= form.label :URL %><br>
+                <%= form.text_field :URL, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+                <%= form.label :fechaInicio %><br>
+                <%= form.date_select :fechaInicio %>
+            </div>
+            
+            <div class="form-group">
+                <%= form.label :fechaFin %><br>
+                <%= form.date_select :fechaFin %>
+            </div>
+
+            <div class="form-group">
+                <%= form.label :descripcionPremio %><br>
+                <%= form.text_area :descripcionPremio, class: "form-control" %>
+            </div>
+        
+            <div class="form-group">
+            <%= form.submit "Crear concurso", class:"btn btn-default btn-lg btn-block" %>
+            </div>
+        <% end %>
+    </div>
+  </div>
+</div>

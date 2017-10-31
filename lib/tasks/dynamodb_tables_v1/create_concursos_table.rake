@@ -14,28 +14,28 @@ namespace :dynamodb_tables_v1 do
             table_name: 'Concursos',
             key_schema: [
                 {
-                    attribute_name: 'admin',
+                    attribute_name: 'url',
                     key_type: 'HASH'  #Partition key
                 },
                 {
-                    attribute_name: 'title',
+                    attribute_name: 'admin',
                     key_type: 'RANGE' #Sort key
                 }
             ],
             attribute_definitions: [
                 {
-                    attribute_name: 'admin',
+                    attribute_name: 'url',
                     attribute_type: 'S'
                 },
                 {
-                    attribute_name: 'title',
+                    attribute_name: 'admin',
                     attribute_type: 'S'
                 },
         
             ],
             provisioned_throughput: {
-                read_capacity_units: 10,
-                write_capacity_units: 10
+                read_capacity_units: 1,
+                write_capacity_units: 1
           }
         }
   

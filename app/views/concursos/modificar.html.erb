@@ -1,0 +1,36 @@
+
+
+<h1>Modificar Concurso</h1>
+
+<%= form_with scope: :concurso, url: actualizar_concursos_path, local: true do |form| %>
+    <p>
+      <%= form.label :nombre %><br>
+      <%= form.text_field :nombre %>
+    </p>
+
+    <%= form.hidden_field :url, :value => @concurso[:url]%>
+
+    <p>
+        <%= form.label :imagen %><br>
+        <%= form.file_field :imagen %>
+    </p>
+
+    <p>
+        <%= form.label :fechaInicio %><br>
+        <%= form.date_select :fechaInicio %>
+    </p>
+    
+    <p>
+        <%= form.label :fechaFin %><br>
+        <%= form.date_select :fechaFin %>
+    </p>
+
+    <p>
+        <%= form.label :descripcionPremio %><br>
+        <%= form.text_area :descripcionPremio %>
+    </p>
+   
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>

@@ -8,7 +8,18 @@ end
 #AWS-SDK
 gem 'aws-sdk'
 
+# To set environment variables
 gem 'dotenv-rails'
+
+# User managment
+gem 'devise'
+
+# Use mysql as the database for Active Record
+gem 'mysql2', '>= 0.3.18', '< 0.5'
+
+
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
@@ -18,6 +29,8 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
