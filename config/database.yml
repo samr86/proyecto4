@@ -5,13 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: rootroot
-  host: mysqldesd.c2avfpactkac.us-east-2.rds.amazonaws.com
-  port: 3306
+  username: mmfmesrrajcztu
+  password: af4d2aad550566adfba6c697d4ac47f61693d85b90773fbbf0a481423123b4cd
+  host: ec2-54-221-229-64.compute-1.amazonaws.com
+  port: 5432
 
 
 development:
