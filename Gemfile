@@ -15,7 +15,7 @@ gem 'dotenv-rails'
 gem 'devise'
 
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'pg', '~> 0.21.0'
 
 
 
